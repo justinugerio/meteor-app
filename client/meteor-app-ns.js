@@ -6,3 +6,7 @@
 // Global namespace object
 MeteorApp = {};
 
+// For user accounts, only require username
+Accounts.ui.config({
+    passwordSignupFields: 'USERNAME_ONLY'
+});
