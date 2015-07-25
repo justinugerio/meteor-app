@@ -2,7 +2,7 @@
 // main start function
 $(function () {
 
-    alert("Hello there!");
+    //alert("Hello there!");
 
 });
 
