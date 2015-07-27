@@ -6,11 +6,8 @@
 Meteor.startup(function () {
 
     debugger;     // line used for debugging with 'meteor debug'
-    var a = 10;
-    var b = 12;
-    var c = a + b;
 
-    console.log('Starting up the server, var c = ' + c);
+    console.log('Starting up the best Meteor App server in the world');
 
 });
 

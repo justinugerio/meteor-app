@@ -4,6 +4,15 @@
     background-color: #0bd838;
     width: 100%;
     height: 140px;
-    position: absolute;
-    z-index: -1;
+    position: relative;
 }
+
+.main-header-container {
+    position: absolute;
+    bottom: 5px;
+}
+
+.header-spacer {
+    height: 40px;
+}
+
