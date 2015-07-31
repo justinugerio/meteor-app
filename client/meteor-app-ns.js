@@ -3,24 +3,26 @@
  */
 /** MeteorApp Namespace file **/
 
-// Global namespace object
-MeteorApp = {};
-
-// Namespace variables
-MeteorApp.list = function () {
-    return ['abc', 'def', 'ghi', 'jkl', 'mno'];
-}
-
-// Meteor sessions
-Session.setDefault('message', 'this is the default session message!');
-
 // For user accounts, only require username
 Accounts.ui.config({
     passwordSignupFields: 'USERNAME_ONLY'
 });
 
-Template.listCards.helpers({
-    getList: function () {
-        return MeteorApp.list();
+// Card template helpers
+Template.templateListCards.helpers({
+    getDeck: function () {
+        return _.map(Session.get('deck'), function (val) {
+            return {card: val};
+        });
+    }
+});
+
+// Card template events
+Template.templateControlButtons.events({
+    'click #btn-reset-deck': function (event, template) {
+        MeteorApp.initializeDeck();
+    },
+    'click #btn-shuffle-deck': function (event, template) {
+        MeteorApp.shuffleDeck();
     }
 });
