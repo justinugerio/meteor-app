@@ -74,7 +74,9 @@
         <h4>Meteor App Panel</h4>
       </div>
       <div id="panel-first-body-id" class="panel-body">
-          Something goes here.
+          {{ > controlButtons }}
+            <br />
+          {{ > listCards }}
       </div>
     </div>
   </div>
@@ -94,4 +96,21 @@
       </div>
     </footer>
   </div>  	<!-- end Footer container -->
+</template>
+
+<template name="controlButtons">
+    <div>
+        <button id="btn-reset-deck" type="button" class="btn btn-info"><i class="fa fa-thumbs-o-up fa-lg"></i>&nbsp;&nbsp;&nbsp;Reset Deck</button>
+        <button id="btn-shuffle-deck" type="button" class="btn btn-danger"><i class="fa fa-money fa-lg"></i>&nbsp;&nbsp;&nbsp;Shuffle</button>
+    </div>
+</template>
+
+<template name="listCards">
+    <div id="div-list-cards">
+        <ul>
+            {{ #each getList }}
+            <li>{{ this }}</li>
+            {{ /each }}
+        </ul>
+    </div>
 </template>

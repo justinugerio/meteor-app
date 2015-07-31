@@ -10,3 +10,6 @@ accounts-password
 accounts-ui
 underscore
 iron:router
+fortawesome:fontawesome
+mrt:jquery-ui-bootstrap
+audit-argument-checks
