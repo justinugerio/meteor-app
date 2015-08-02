@@ -107,20 +107,21 @@
 </template>
 
 <template name="templateListCards">
-    <div id="div-list-cards">
-        <h5>Full Deck</h5>
+<div id="div-list-cards">
+    <!-- <h5>Full Deck</h5>
         <ul>
             {{ #each getDeck}}
-            <li><i class="fa fa-btc"></i>{{ card }}&nbsp;</li>
+            &lt;!&ndash; <li><i class="fa fa-btc"></i>{{ card }}&nbsp;</li> &ndash;&gt;
+            <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
             {{ /each }}
         </ul>
-      <br/>
+      <br/>-->
         <div class="row"> <!-- player 1 cards-->
             <div class="col-md-4"><!-- player starting 5 cards-->
               <h5>Player1 Starting Cards</h5>
                 <ul>
                   {{ #each getPlayer1StartingCards}}
-                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                    <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                   {{ /each }}
                 </ul>
             </div>
@@ -128,7 +129,7 @@
                 <h5>Player1 Reserve Cards</h5>
               <ul>
                 {{ #each getPlayer1ReserveCards}}
-                  <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                 {{ /each }}
               </ul>
             </div>
@@ -138,7 +139,7 @@
                 <h5>Game Reset1 Cards</h5>
                 <ul>
                   {{ #each getGameReset1Cards}}
-                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                    <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                   {{ /each }}
                 </ul>
             </div>
@@ -146,7 +147,7 @@
                 <h5>Game Start1 Card</h5>
                 <ul>
                   {{ #each getGameStart1Cards}}
-                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                    <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                   {{ /each }}
                 </ul>
             </div>
@@ -154,7 +155,7 @@
                 <h5>Game Start2 Card</h5>
                 <ul>
                   {{ #each getGameStart2Cards}}
-                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                    <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                   {{ /each }}
                 </ul>
             </div>
@@ -162,7 +163,7 @@
                 <h5>Game Reset2 Cards</h5>
                 <ul>
                   {{ #each getGameReset2Cards}}
-                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                    <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                   {{ /each }}
                 </ul>
             </div>
@@ -172,7 +173,7 @@
                 <h5>Player2 Starting Cards</h5>
                 <ul>
                   {{ #each getPlayer2StartingCards}}
-                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                    <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                   {{ /each }}
                 </ul>
             </div>
@@ -180,7 +181,7 @@
                 <h5>Player2 Reserve Cards</h5>
                 <ul>
                   {{ #each getPlayer2ReserveCards}}
-                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                    <li><img src="/cards/{{ card }}.png" alt="card image" /></li>
                   {{ /each }}
                 </ul>
             </div>
