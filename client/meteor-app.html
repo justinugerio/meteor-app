@@ -54,15 +54,16 @@
     <!-- /.container -->
   </nav>
 
-  <div class="main-header">
+  <header class="main-header">
       <div class="container">
           <div class="main-header-container">
           <h1 class="main-header-message">Welcome to Meteor App! <small>The coolest Meteor App in the world</small></h1>
           </div>
       </div>
-  </div>
+  </header>
 
-  <div class="header-spacer"></div>
+    <div class="header-spacer"></div>
+
 </template>
 
 
@@ -107,10 +108,83 @@
 
 <template name="templateListCards">
     <div id="div-list-cards">
+        <h5>Full Deck</h5>
         <ul>
             {{ #each getDeck}}
-            <li>{{ card }}</li>
+            <li><i class="fa fa-btc"></i>{{ card }}&nbsp;</li>
             {{ /each }}
         </ul>
+      <br/>
+        <div class="row"> <!-- player 1 cards-->
+            <div class="col-md-4"><!-- player starting 5 cards-->
+              <h5>Player1 Starting Cards</h5>
+                <ul>
+                  {{ #each getPlayer1StartingCards}}
+                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  {{ /each }}
+                </ul>
+            </div>
+            <div class="col-md-8"><!-- player reserve 15 cards-->
+                <h5>Player1 Reserve Cards</h5>
+              <ul>
+                {{ #each getPlayer1ReserveCards}}
+                  <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                {{ /each }}
+              </ul>
+            </div>
+        </div>
+        <div class="row"> <!-- game cards-->
+            <div class="col-md-3"><!-- game reset 5 cards-->
+                <h5>Game Reset1 Cards</h5>
+                <ul>
+                  {{ #each getGameReset1Cards}}
+                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  {{ /each }}
+                </ul>
+            </div>
+            <div class="col-md-2"><!-- game start 1 card-->
+                <h5>Game Start1 Card</h5>
+                <ul>
+                  {{ #each getGameStart1Cards}}
+                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  {{ /each }}
+                </ul>
+            </div>
+            <div class="col-md-2"><!-- game start 1 card-->
+                <h5>Game Start2 Card</h5>
+                <ul>
+                  {{ #each getGameStart2Cards}}
+                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  {{ /each }}
+                </ul>
+            </div>
+            <div class="col-md-3"><!-- game reset 5 cards-->
+                <h5>Game Reset2 Cards</h5>
+                <ul>
+                  {{ #each getGameReset2Cards}}
+                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  {{ /each }}
+                </ul>
+            </div>
+        </div>
+        <div class="row"><!-- player 2 cards-->
+            <div class="col-md-4"><!-- player starting 5 cards-->
+                <h5>Player2 Starting Cards</h5>
+                <ul>
+                  {{ #each getPlayer2StartingCards}}
+                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  {{ /each }}
+                </ul>
+            </div>
+            <div class="col-md-8"><!-- player reserve 15 cards-->
+                <h5>Player2 Reserve Cards</h5>
+                <ul>
+                  {{ #each getPlayer2ReserveCards}}
+                    <li><i class="fa fa-bomb"></i>{{ card }}&nbsp;</li>
+                  {{ /each }}
+                </ul>
+            </div>
+        </div>
     </div>
+    <br/>
 </template>

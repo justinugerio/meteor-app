@@ -22,6 +22,7 @@ MeteorApp.initializeDeck = function() {
     }); // end ranks
 
     Session.set('deck', MeteorApp.deck);
+    MeteorApp.setGameHands();
     return MeteorApp.deck;
 };
 
@@ -29,8 +30,28 @@ MeteorApp.initializeDeck = function() {
 MeteorApp.shuffleDeck = function () {
     MeteorApp.deck = _.shuffle(MeteorApp.deck);
     Session.set('deck', MeteorApp.deck);
+    MeteorApp.setGameHands();
     return MeteorApp.deck;
 }
+
+// set game hands, i.e. deal hands too players and game
+MeteorApp.setGameHands = function() {
+    var deck = MeteorApp.deck;
+
+    // player1 hands
+    Session.set('player1-starting-hand', deck.slice(0, 5));
+    Session.set('player1-reserve-hand', deck.slice(5, 20));
+
+    // game hands
+    Session.set('game-reset1-hand', deck.slice(20, 25));;
+    Session.set('game-start1-hand', deck.slice(25, 26));
+    Session.set('game-start2-hand', deck.slice(26, 27));
+    Session.set('game-reset2-hand', deck.slice(27, 32));
+
+    // player 2 hands
+    Session.set('player2-starting-hand', deck.slice(32, 37));
+    Session.set('player2-reserve-hand', deck.slice(37, 52));
+};
 
 
 // Main start function
